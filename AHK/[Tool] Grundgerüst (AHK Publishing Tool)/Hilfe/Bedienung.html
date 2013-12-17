@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="CONTENT-TYPE" content="text/html; charset=windows-1252"><title>Bedienung</title>
+
+<meta name="GENERATOR" content="OpenOffice.org 3.1 (Win32)">
+<meta name="CREATED" content="0;0">
+<meta name="CHANGEDBY" content="Paul Bichler">
+<meta name="CHANGED" content="20100527;17015700">
+<style type="text/css">
+.codebox {
+	font-family: Andale Mono, Courier New, Courier, sans-serif; font-size: 12px; line-height: 14px; color: #212121;
+	background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+</style>
+</head>
+<body style="direction: ltr;" lang="de-DE">
+<table border="0" width="100%">
+<tr><td bgcolor="#6A5ACD">
+<center><font size="5"><big><big>Bedienung</big></big></font></center>
+</td></tr>
+</table>
+<br><br>
+<dl>
+<dt><a name="Schnellstart"><font size="5"><big>Schnellstart</big></font></a></dt>
+</dl>
+<font size="4">Starten Sie Grundgerüst. Drücken Sie auf
+den Button "Öffnen" und wählen Sie Ihr unkompiliertes Skript aus.<br>
+Füllen Sie nun alle Felder auf der linken Seite aus.<br><br></font>
+<div style="margin-left: 40px; margin-right: 40px;">
+<table border="0" colspan="100px">
+	<tr><td width="150px"><b><br>Programmname:<br></b></td><td><br>Der Name des Programms.<br></td></tr>
+	<tr><td><b><br>Kürzel:<br></b></td><td><br>Ein möglichst verkürzter Programmname.<br></td></tr>
+	<tr><td><b><br>Ausführl. Name:<br></b></td><td><br>Der ausführliche Programmname.<br></td></tr>
+	<tr><td><b><br>Inst. Ordner:<br></b></td><td><br>Der Ordner, in den bei der Installation die Dateien entpackt werden.<br></td></tr>
+	<tr><td><b><br>Prog. Version:<br></b></td><td><br>Kurze Programmversion, die bei der Installation angezeigt wird.<br></td></tr>
+	<tr><td><b><br>Update-Version:<br></b></td><td><br>Genaue Programmversion. Wird für den Vergleich dieser Version mit der online verfügbaren Version benötigt.<br></td></tr>
+	<tr><td><b><br>Update-Abgleich:<br></b></td><td><br>Online Speicherort der .ini Datei, in der die Informationen über die online verfügbare Version stehen.<br></td></tr>
+</table>
+</div>
+<br>
+<hr>
+<font size="4">Wählen Sie auf der rechten Seite die Dateien aus, die mit in den
+Installer gepackt werden sollen.</font><br>
+<div style="margin-left: 40px;">
+<table border="0" colspan="100px">
+	<tr><td width="150px"><b><br>Ordner:<br></b></td><td><br>Alle Unterordner im installiertem Programm.<br></td></tr>
+	<tr><td><b><br>Dateien:<br></b></td><td><br>Alle Dateien, die in die Installationsdatei gepackt und bei der Installation extrahiert werden.<br></td></tr>
+	<tr><td><b><br>Exe:<br></b></td><td><br>Alle Skripte, die vor dem Erstellen der Installationsdatei kompiliert und mit hineingepackt werden.<br></td></tr>
+</table>
+<br>
+Optional können Sie nun für Ihre zu kompilierenden Skripte einen Icon
+auswählen.
+</div>
+<br>
+<hr>
+<font size="4">Drücken Sie auf "Installationsdatei generieren".</font>
+
+
+<br><br><br><br>
+
+
+<dl>
+<dt><a name="Details"><font size="5"><big>Details</big></font></a></dt>
+</dl>
+<font size="4">Programmname, Kürzel, Ausführlicher Name und Programmversion werden
+während der Installation angezeigt.<br>Sie haben keine weitere Bedeutung.<br><br></font>
+<hr>
+<font size="4">Die Updatefunktion startet beim Aufrufen des fertigen Hauptprogrammes
+automatisch und überprüft im Hintergrund, ob ein neues Update verfügbar
+ist. Das automatische Prüfen auf Updates kann deaktiviert werden:<br></font><ul><li>In der Datei Einstellungen.ini muss ein folgender Eintrag hinzugefügt werden:<br>
+<table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr><td class="codebox">
+[Einstellungen]<br>
+Auf Updates prüfen=1
+</td></tr></table>
+<br>Mit einer 0 wird die Updatefunktion deaktiviert. Am besten fügt man im
+Hauptprogramm eine Einstellung hinzu, die diesen Wert ändert.</li></ul>
+<hr>
+<font size="4">Damit die Updatefunktion ordnungsgemäß funktioniert, muss folgendes gewährleistet sein:<br></font><ul>
+<li>Es muss mindestens ein Link zum Update Abgleich eingegeben
+werden. Der Link muss direkt zur Abgleich-Datei führen.</li>
+<li>Die Abgleich-Datei muss im INI Format sein. Zum Beispiel
+so:<br>
+<table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr><td class="codebox">
+<span style="font-family: Consolas;">[Update Info]</span><br style="font-family: Consolas;">
+<span style="font-family: Consolas;">Version=2.00.00</span><br style="font-family: Consolas;">
+<span style="font-family: Consolas;">Download Path=https://dl.dropbox.com/s/...</span><br style="font-family: Consolas;">
+<span style="font-family: Consolas;">Open Site=http://de.autohotkey.com/forum/...</span></td></tr></table><br></li>
+<li>In der Abgleich-Datei muss stehen, welche Version verfügbar
+ist und
+mindestens entweder der direkte Download Link des Installers der neuen
+Version oder eine Internetseite.</li>
+<li>Die Abgleich-Versionsnummern werden beim Checken auf Updates
+mithilfe eines Größenvergleichs
+<table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr><td class="codebox">
+<span style="font-family: Consolas;">&nbsp;if
+(DieseVersion &lt; DownloadedVersion)</span>&nbsp;
+</td></tr></table>
+verglichen. Sie müssen sicherstellen, dass bei einer neueren Version,
+die Update Info, die Sie hochladen, bei diesem Vergleich größer ist.</li></ul><font size="4">Weitere Punkte sind zu beachten:</font><br><ul><li>Es ist möglich, die Lizenzbedingungen nochmal anzeigen zu lassen. Dafür im Hauptskript eine Sprungmarke 
+<table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr><td class="codebox">
+<span style="font-family: Consolas;">LizenzbedingungenÜber:</span>
+</td></tr></table>
+setzten, worauf ein
+<table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr><td class="codebox">
+<span style="font-family: Consolas;">Return</span>
+</td></tr></table>
+folgt. Beim Erstellen des Codes wird die Sprungmarke auf die richtige Stelle gesetzt.</li></ul>
+
+
+<br><br><br><br>
+
+<dl>
+<dt><a name="Was_Grundgerüst_macht"><font size="5"><big>Was Grundgerüst macht</big></font></a></dt>
+</dl>
+<ul>
+<li>Im ersten
+Schritt werden die Sourcecodes für alle drei Funktionen generiert.
+<ul>
+<li>Update Checker.ahk</li>
+<li>"Programmname" modified.ahk</li>
+<li>"Programmname" Installer.ahk</li>
+</ul><br>
+Die originale Quellcode-Datei des Programms bleibt
+unangetastet. In der Datei <i>"Programmname" modified.ahk</i> sind auch alle
+im Fenster vorgenommenden Änderungen gespeichert.</li>
+<li>Diese drei Skripte (und eventuell weitere hinzugewählte
+Skripte) werden kompiliert.</li>
+<li>Die Installationsdatei wird erstellt.</li>
+</ul>
+
+
+<br><br><br><br>
+
+
+<dl>
+<dt><a name="Sprachen"><font size="5"><big>Sprachen</big></font></a></dt>
+</dl>
+Seit Version 2.03.01 wird Grundgerüst standardmäßig in folgenden Sprachen unterstützt:
+<ul>
+	<li>Deutsch</li>
+	<li>English</li>
+</ul><br>
+Die gewünschte Sprache lässt sich im Menü unter "Einstellungen > Sprachen" einstellen.
+<br><br>
+Im Installationspaket ist zudem das "Translation Tool" enthalten, welches es ermöglicht auch eigene Sprachpakete für Grundgerüst zu erstellen.<br>
+Ein <b>korrekt übersetztes und vollständiges</b> Sprachpaket, kann auf Anfrage natürlich auch mit in das Standard-Repertoire aufgenommen werden.
+</body></html>

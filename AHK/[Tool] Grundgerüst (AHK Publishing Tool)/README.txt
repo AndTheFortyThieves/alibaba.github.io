@@ -1,0 +1,2 @@
+Dieses Tool ist in einer Zusammenarbeit zwischen dem AHK-Forum Nutzer 'bichlepa' und mir ('Alibaba') entstanden.
+Es bietet die Möglichkeit, ein Autohotkey Projekt mit allen für eine Veröffentlichung benötigten Features, wie Lizenzbedingungen, Installer und Update Checker auszustatten. Ein eigenes System zur Dateiauswahl macht es möglich, schnell alle einzubindenden Dateien/Ordner auszuwählen.
